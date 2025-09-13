@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="s13-05-04.html">page13-05-04</a>
+    <script>
+        function f1(){
+            console.log("fonction f1");
+        };
+        let btn1 = document.createElement("button");
+        btn1.innerHTML = "OK1";
+        btn1.addEventListener("click", function(){
+            console.log("fonction anonyme");
+        });
+        document.body.appendChild(btn1); // Ajouter btn1 au DOM
+
+        let btn2 = document.createElement("button");
+        btn2.innerHTML = "OK2";
+        btn2.addEventListener("click", ()=>{
+            console.log("Arrow function");
+        });
+        document.body.appendChild(btn2); // Ajouter btn2 au DOM
+
+        let btn3 = document.createElement("button");
+        btn3.innerHTML = "OK3";
+        btn3.addEventListener("click", f1);
+        document.body.appendChild(btn3); // Ajouter btn3 au DOM
+        
+
+    </script>
+</body>
+</html>
